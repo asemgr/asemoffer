@@ -1,0 +1,97 @@
+/* 1. ΤΟ ΓΚΡΙ ΠΛΑΙΣΙΟ ΤΟΥ NAVIGATOR */
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) {
+    background-color: #3f3f3f !important; 
+    border-radius: 10px !important;
+    padding: 10px 30px !important;
+    align-items: center !important;
+}
+
+/* 2. ΜΠΛΕ ΚΟΥΜΠΙ (ΕΚΤΥΠΩΣΗ) */
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) div[data-testid="stColumn"]:nth-of-type(5) button {
+    background-color: #065cab !important;
+    color: white !important;
+    height: 35px !important; /* Λίγο πιο ψηλό για ευκολία */
+    width: 100% !important;
+    border-radius: 6px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    border: none !important;
+    transition: 0.3s;
+}
+
+/* 3. ΚΟΚΚΙΝΟ ΚΟΥΜΠΙ (ΚΑΘΑΡΙΣΜΟΣ) */
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) div[data-testid="stColumn"]:nth-of-type(6) button {
+    background-color: #cc0e18 !important;
+    color: white !important;
+    height: 35px !important;
+    width: 100% !important;
+    border-radius: 6px !important;
+    font-weight: bold !important;
+    border: none !important;
+}
+
+/* 4. ΡΥΘΜΙΣΗ INPUTS ΣΤΟΝ NAVIGATOR */
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) [data-baseweb="select"] > div,
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) [data-baseweb="input"] > div,
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) button[aria-haspopup="dialog"] {
+    background-color: #282828 !important;
+    border: none !important;
+    border-radius: 6px !important;
+}
+
+/* 5. ΤΟ ΚΟΥΜΠΙ ΠΟΥ ΑΝΟΙΓΕΙ ΤΟ POPOVER */
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) div[data-testid="stPopover"] button {
+    background-color: #282828 !important;
+    border: 1px solid #444 !important;
+    color: white !important;
+}
+
+/* 6. ΧΡΩΜΑ ΚΕΙΜΕΝΟΥ & SVG */
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) input,
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) span,
+div[data-testid="stHorizontalBlock"]:has(input[aria-label="num_v20"]) svg {
+    color: white !important;
+    fill: white !important;
+    -webkit-text-fill-color: white !important;
+}
+
+/* Hover effects */
+button:hover {
+    filter: brightness(1.2) !important;
+    cursor: pointer !important;
+}
+
+div[data-testid="column"] button:has(div:contains("％")) { 
+    border-radius: 50%; 
+    width: 35px; 
+    height: 35px; 
+}
+
+/* 1. Prevent the "ghost" space from appearing & Anchor the button */
+div[data-testid="stVerticalBlockBorderWrapper"] div:has(> button[key*="btn_disc"]) {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    z-index: 1000 !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. Ensure the card is relative so absolute positioning works inside it */
+div[data-testid="stVerticalBlockBorderWrapper"]:has(button[key*="btn_disc"]) {
+    position: relative !important;
+}
+
+/* 3. Style the button to be small and clean */
+button[key*="btn_disc"] {
+    background-color: #262730 !important;
+    color: white !important;
+    border: 1px solid #444 !important;
+    border-radius: 4px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    font-size: 14px !important;
+    padding: 0 !important;
+}
